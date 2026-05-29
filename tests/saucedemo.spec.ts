@@ -156,3 +156,5 @@ test.describe("Saucedemo logging in & shopping flow", () => {
     await expect(page.getByText("Thank you for your order")).toBeVisible();
   });
 });
+
+// ...
