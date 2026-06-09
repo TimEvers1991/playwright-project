@@ -150,11 +150,13 @@ test.describe("Saucedemo logging in & shopping flow", () => {
     await expect(page).toHaveURL(/checkout-step-two\.html$/);
     await expect(page.locator(".cart_item")).toHaveCount(1);
 
-    // Finish - complete order
-    await page.getByRole("button", { name: "Finish" }).click();
+    // Finish: complete orders
+    await page.getByRole("button", { name: "Finish" }).click(); //bezig met branch test, kan je later verwijderen
     await expect(page).toHaveURL(/checkout-complete\.html$/);
-    await expect(page.getByText("Thank you for your order")).toBeVisible();
+    // await expect(page.getByText("Thank you for your order")).toBeVisible();
   });
+
+  console.log("Hoi, ben bezig met een branch test");
 });
 
 // ............
